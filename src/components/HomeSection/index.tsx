@@ -1,9 +1,13 @@
 import React from "react";
 import ImageContainer from "components/common/ImageContainer";
 import DanielImage from "assets/daniel.png";
-const HomeSection = () => {
+
+const HomeSection = (_props: any, ref: any) => {
   return (
-    <div className="flex flex-col h-1/2 w-full items-start mt-16 p-10">
+    <div
+      ref={ref}
+      className="flex flex-col h-1/2 w-full items-start mt-16 p-10"
+    >
       <div className="flex items-center justify-start w-full space-x-20">
         <ImageContainer
           leftInset
@@ -22,4 +26,4 @@ const HomeSection = () => {
   );
 };
 
-export default HomeSection;
+export default React.forwardRef(HomeSection);

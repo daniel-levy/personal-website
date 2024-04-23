@@ -62,31 +62,29 @@ const projects: Project[] = [
   },
 ];
 
-const ProjectSection = () => {
+const ProjectSection = (_props: any, ref: any) => {
   return (
-    <>
-      <div className="flex flex-col w-full h-1/2 items-start p-10">
-        <div className="flex flex-col w-full">
-          <div className="flex flex-col w-fit">
-            <text className="font-bold text-3xl leading-7">Projects</text>
-            <div className="w-full h-4 bg-sky-900"></div>
-          </div>
-          <div className="mt-10 h-auto w-full relative">
-            <Carousel
-              responsive={responsive}
-              renderButtonGroupOutside={true}
-              arrows={false}
-              customButtonGroup={<CustomButtons />}
-            >
-              {projects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
-              ))}
-            </Carousel>
-          </div>
+    <div ref={ref} className="flex flex-col w-full h-1/2 items-start p-10">
+      <div className="flex flex-col w-full">
+        <div className="flex flex-col w-fit">
+          <text className="font-bold text-3xl leading-7">Projects</text>
+          <div className="w-full h-4 bg-sky-900"></div>
+        </div>
+        <div className="mt-10 h-auto w-full relative">
+          <Carousel
+            responsive={responsive}
+            renderButtonGroupOutside={true}
+            arrows={false}
+            customButtonGroup={<CustomButtons />}
+          >
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </Carousel>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default ProjectSection;
+export default React.forwardRef(ProjectSection);

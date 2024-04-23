@@ -45,9 +45,9 @@ const experienceList = [
   },
 ];
 
-const WorkSection = () => {
+const WorkSection = (_props: any, ref: any) => {
   return (
-    <div className="flex flex-col w-full h-1/2 items-start p-10">
+    <div ref={ref} className="flex flex-col w-full h-1/2 items-start p-10">
       <div className="flex flex-col w-full">
         <div className="flex flex-col w-fit">
           <text className="font-bold text-3xl leading-7">Work</text>
@@ -68,4 +68,4 @@ const WorkSection = () => {
   );
 };
 
-export default WorkSection;
+export default React.forwardRef(WorkSection);

@@ -7,9 +7,12 @@ import ResumeLogo from "assets/contact/resume.png";
 import LastFmLogo from "assets/contact/lastfm_logo.png";
 import TwitterLogo from "assets/contact/twitter_logo.png";
 
-const ContactSection = () => {
+const ContactSection = (_props: any, ref: any) => {
   return (
-    <div className="w-screen bg-sky-900 h-[600px] text-white flex flex-col items-center p-10 mt-20">
+    <div
+      ref={ref}
+      className="w-screen bg-sky-900 h-[600px] text-white flex flex-col items-center p-10 mt-20"
+    >
       <div className="flex flex-col sm:w-4/5 2xl:w-3/5 items-start ">
         <div className="flex flex-col w-fit">
           <text className="font-bold text-3xl leading-7">Contact Me</text>
@@ -101,4 +104,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default React.forwardRef(ContactSection);

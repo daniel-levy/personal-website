@@ -3,9 +3,9 @@ import React from "react";
 import ImageContainer from "../common/ImageContainer";
 import ImageCarousel from "./ImageCarousel";
 
-const AboutSection = () => {
+const AboutSection = (_props: any, ref: any) => {
   return (
-    <div className="flex flex-col w-full h-1/2 items-start p-10">
+    <div ref={ref} className="flex flex-col w-full h-1/2 items-start p-10">
       <div className="flex items-center h-1/2 w-full justify-between space-x-20">
         <div className="flex h-96 flex-col justify-evenly text-start">
           <div className="flex flex-col w-fit">
@@ -39,4 +39,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default React.forwardRef(AboutSection);
