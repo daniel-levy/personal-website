@@ -14,7 +14,7 @@ const HomeSection = (_props: any, ref: any) => {
           children={<img src={DanielImage} className="h-96" alt="daniel"></img>}
         />
         <div className="flex flex-col justify-evenly h-96 text-start">
-          <text className="font-bold text-5xl">Hi! My name is Daniel Levy</text>
+          <text className="font-bold text-4xl">Hi! My name is Daniel Levy</text>
           <text className="font-normal text-2xl">
             I am a software developer based out of Vancouver, British Columbia
             with a passion for creating awesome experiences

@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
-
+import React, { useRef, useState, useEffect } from "react";
+import Fab from "@mui/material/Fab";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Header from "components/Header";
 import HomeSection from "components/HomeSection";
 import AboutSection from "components/AboutSection";
@@ -8,6 +9,10 @@ import ContactSection from "components/ContactSection";
 import ProjectSection from "components/ProjectSection";
 
 const MainPage = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showGoTop, setshowGoTop] = useState(false);
+
+  const headerRef = useRef(null);
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const workRef = useRef(null);
@@ -18,9 +23,24 @@ const MainPage = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleVisibleButton = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+
+    if (scrollPosition > 100) {
+      setshowGoTop(true);
+    } else if (scrollPosition < 100) {
+      setshowGoTop(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleVisibleButton);
+  });
+
   return (
     <div className="flex flex-col h-full">
-      <div className="flex">
+      <div className="flex" ref={headerRef}>
         <Header
           homeHandler={handleScroll(homeRef)}
           aboutHandler={handleScroll(aboutRef)}
@@ -38,6 +58,19 @@ const MainPage = () => {
         </div>
       </div>
       <ContactSection ref={contactRef} />
+      <div
+        className={`fixed bottom-8 right-8`}
+        onClick={handleScroll(headerRef)}
+      >
+        <div className={`${showGoTop ? "" : "hidden"}`}>
+          <Fab
+            style={{ color: "#0C4A6E", backgroundColor: "white" }}
+            aria-label="scroll to top"
+          >
+            <ArrowUpwardIcon />
+          </Fab>
+        </div>
+      </div>
     </div>
   );
 };
