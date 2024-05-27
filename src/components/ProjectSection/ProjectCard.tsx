@@ -32,7 +32,7 @@ const ProjectCard = (props: Project) => {
                 <text className="text-lg font-bold tracking-tight text-gray-900">
                   {title}
                 </text>
-                <div className="space-x-3 hover:cursor-pointer">
+                <div className="space-x-1 hover:cursor-pointer">
                   {external && (
                     <IconButton
                       sx={{ color: "#0C4A6E" }}

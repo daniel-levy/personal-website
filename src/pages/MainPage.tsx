@@ -50,7 +50,7 @@ const MainPage = () => {
         />
       </div>
       <div className="flex flex-col flex-1 w-full items-center">
-        <div className="sm:w-4/5 2xl:w-3/5 space-y-10">
+        <div className="sm:w-4/5 2xl:w-3/5 space-y-4">
           <HomeSection ref={homeRef} />
           <AboutSection ref={aboutRef} />
           <WorkSection ref={workRef} />
