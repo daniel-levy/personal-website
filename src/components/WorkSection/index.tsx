@@ -69,7 +69,7 @@ const experienceList = [
       `Documented and triaged issues that would appear in our production site and helped develop rapid fixes to
     prevent loss of revenue from negative customer experience.`,
     ],
-    skills: ["react"],
+    skills: ["testing", "jenkins"],
     site: "https://www.builddirect.com/",
   },
 ];

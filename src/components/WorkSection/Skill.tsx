@@ -7,6 +7,8 @@ import TsLogo from "assets/skills/typescript_logo.png";
 import AiLogo from "assets/skills/ai_logo.png";
 import GcpLogo from "assets/skills/gcp_logo.png";
 import PmLogo from "assets/skills/pm_logo.png";
+import TestingLogo from "assets/skills/testing_logo.png";
+import JenkinsLogo from "assets/skills/jenkins_logo.png";
 
 interface SkillsProps {
   skill: string;
@@ -45,6 +47,14 @@ const skillsList = {
   pm: {
     name: "Project Management",
     logo: PmLogo,
+  },
+  testing: {
+    name: "Testing",
+    logo: TestingLogo,
+  },
+  jenkins: {
+    name: "Jenkins",
+    logo: JenkinsLogo,
   },
 };
 

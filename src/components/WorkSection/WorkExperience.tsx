@@ -1,5 +1,6 @@
 import React from "react";
 import Skill from "./Skill";
+import CircleIcon from "@mui/icons-material/Circle";
 
 interface WorkExperienceProps {
   logo: any;
@@ -37,11 +38,14 @@ const WorkExperience = (props: WorkExperienceProps) => {
           </div>
           <text className="font-bold text-lg text-sky-900">{title}</text>
           <div className="mt-4">
-            <ul>
-              {experience.map((bullet) => {
-                return <li className="mb-4">&#8226; {bullet}</li>;
-              })}
-            </ul>
+            {experience.map((bullet) => {
+              return (
+                <div className="flex flex-row space-x-4 mb-4">
+                  <CircleIcon style={{ color: "#0C4A6E", width: "8px" }} />
+                  <text>{bullet}</text>
+                </div>
+              );
+            })}
           </div>
           <div className="mt-6 flex flex-row gap-x-3 gap-y-3 w-auto flex-wrap">
             {skills.map((skill) => {

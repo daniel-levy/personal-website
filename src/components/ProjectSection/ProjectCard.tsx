@@ -58,7 +58,7 @@ const ProjectCard = (props: Project) => {
               <div className="flex flex-col space-y-6 w-full h-full mt-8">
                 {experienceDetails.map((detail) => {
                   return (
-                    <div className="flex flex-row space-x-2">
+                    <div className="flex flex-row space-x-4">
                       <CircleIcon style={{ color: "#0C4A6E", width: "8px" }} />
                       <text className="text-sm">{detail}</text>
                     </div>
