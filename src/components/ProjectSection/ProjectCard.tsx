@@ -73,7 +73,7 @@ const ProjectCard = (props: Project) => {
                   setImageModalOpen(true);
                 }}
               >
-                <div className="w-2/3 h-2/3 bg-gray-700">
+                <div className="max-w-56 max-h-56 w-2/3 h-2/3 bg-gray-700">
                   <div className="w-full h-full relative z-0">
                     <div className="relative w-full h-full bg-gray-800 inset-y-4 -inset-x-4 flex justify-center items-center z-0">
                       <div className="relative w-full h-full inset-y-4 -inset-x-4 flex justify-center items-center z-0">

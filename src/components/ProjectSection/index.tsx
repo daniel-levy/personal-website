@@ -39,26 +39,24 @@ const responsive = {
 
 const projects: Project[] = [
   {
-    title: "Project 1",
+    title: "Unicorn.ai - Generative AI @ TELUS",
     experienceDetails: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec, ",
+      "Lead the development and design of an internal web application to enable fellow TELUS colleagues to utilize the latest in generative AI safely and optimally for TELUS",
+      "Redesigned the user interface in Figma and then developed the new interface using React and Material UI to give the page a more intuitive and modern presentation",
+      "Once refactoring and modernization was completed, added new requested features such as the ability to create customized AI assistants, streamlined and simplified the chat experience, and adding a Lab feature that allows users to compare multiple models simultaneously",
+      "Contributed to our other AI clients on Google Chat and Slack, and together these tools had over 25,000 unique users and over a million requests in just under nine months",
     ],
-    images: [TestImage1, TestImage2, TestImage3, TestImage4],
-    github: "test",
-    external: "test",
+    images: [TestImage2, TestImage3, TestImage4],
   },
   {
-    title: "Project 2",
+    title: "Unicorn.ai - Generative AI @ TELUS",
     experienceDetails: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec,  ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet malesuada dui. Aliquam urna quam, pharetra ac urna nec, ",
+      "Lead the development and design of an internal web application to enable fellow TELUS colleagues to utilize the latest in generative AI safely and optimally for TELUS",
+      "Redesigned the user interface in Figma and then developed the new interface using React and Material UI to give the page a more intuitive and modern presentation",
+      "Once refactoring and modernization was completed, added new requested features such as the ability to create customized AI assistants, streamlined and simplified the chat experience, and adding a Lab feature that allows users to compare multiple models simultaneously",
+      "Contributed to our other AI clients on Google Chat and Slack, and together these tools had over 25,000 unique users and over a million requests in just under nine months",
     ],
-    images: [TestImage1, TestImage2, TestImage3, TestImage4],
+    images: [TestImage2, TestImage3, TestImage4],
   },
 ];
 
@@ -67,10 +65,10 @@ const ProjectSection = (_props: any, ref: any) => {
     <div ref={ref} className="flex flex-col w-full h-1/2 items-start p-10">
       <div className="flex flex-col w-full">
         <div className="flex flex-col w-fit">
-          <text className="font-bold text-3xl leading-7">Projects</text>
+          <text className="font-bold text-3xl leading-7 z-50">Projects</text>
           <div className="w-full h-4 bg-sky-900"></div>
         </div>
-        <div className="mt-10 h-auto w-full relative">
+        <div className="mt-4 h-auto w-full relative">
           <Carousel
             responsive={responsive}
             renderButtonGroupOutside={true}

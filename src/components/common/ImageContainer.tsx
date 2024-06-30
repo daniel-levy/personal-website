@@ -11,7 +11,7 @@ const ImageContainer = (props: ImageContainerProps) => {
     <div className="w-auto h-auto">
       <div className="bg-sky-900 w-96 h-96 relative z-0">
         <div
-          className={`absolute w-96 h-96 bg-blue-100 ${
+          className={`absolute w-96 h-96 bg-blue-200 ${
             leftInset ? `-inset-y-6 inset-x-6 ` : `inset-y-6 -inset-x-6 `
           } flex justify-center items-center z-10`}
         >
